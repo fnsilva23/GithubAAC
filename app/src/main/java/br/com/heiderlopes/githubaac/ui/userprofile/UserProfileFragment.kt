@@ -58,7 +58,7 @@ class UserProfileFragment : Fragment() {
     private fun updateUI(user: User?) {
 
         if (user != null) {
-            Picasso.get().load(user.avatarURL).into(ivUsuario)
+            Picasso.get().load(user.avatarURL).placeholder(R.drawable.ic_launcher_background).into(ivUsuario)
             tvUsuario.text = user.login
         }
     }
